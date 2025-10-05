@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数学建模校赛 · 前端</title>
+    <!-- 字体：Inter（正文）与 Lora（标题） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+    <!-- 全局主题与动态背景（桌面宽屏 1920x1080 优化） -->
+    <style>
+      :root {
+        --bg: #0A192F;
+        --accent: #64FFDA;
+        --accent-2: #7A4BFF;
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.65);
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+      }
+      html, body { margin: 0; padding: 0; height: 100%; background: var(--bg); color: var(--text); }
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+        display: block !important;
+        min-width: 1024px;
+        overflow-x: auto;
+      }
+      #app { margin: 0; padding: 0; max-width: none; text-align: left; }
+      /* 动态背景（微动效，避免喧宾夺主） */
+      body::before, body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -2; }
+      body::before {
+        background:
+          radial-gradient(1000px 400px at 20% 10%, rgba(122, 75, 255, 0.14), transparent 60%),
+          radial-gradient(800px 300px at 80% 80%, rgba(100, 255, 218, 0.12), transparent 60%),
+          radial-gradient(600px 200px at 50% 50%, rgba(255, 255, 255, 0.04), transparent 60%);
+        filter: blur(20px);
+        animation: bgShift 40s linear infinite alternate;
+      }
+      @keyframes bgShift {
+        0% { transform: translate3d(0, 0, 0); }
+        50% { transform: translate3d(20px, -10px, 0); }
+        100% { transform: translate3d(-20px, 10px, 0); }
+      }
+      a { color: var(--text); text-decoration: none; }
+      a:hover { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
