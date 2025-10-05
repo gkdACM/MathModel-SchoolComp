@@ -1,0 +1,18 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "数学建模校赛网站后端"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "sqlalchemy>=2.0.32",
+    "pymysql>=1.1.0",
+    "passlib[bcrypt]>=1.7.4",
+    "PyJWT>=2.8.0",
+    "pydantic>=2.8.0",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
